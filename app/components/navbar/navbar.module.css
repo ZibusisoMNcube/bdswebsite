@@ -1,0 +1,22 @@
+/* CSS for NavBar */
+#NavBar {
+    background-color: blue;
+    overflow: hidden;
+  }
+ 
+  /* Sticky Class Designed to provide Sticky Property to the Navbar using JavaScript */
+  .sticky {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 6px;
+  }
+  /*
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    "flex items-center justify-between flex-wrap  p-6"
+  */
