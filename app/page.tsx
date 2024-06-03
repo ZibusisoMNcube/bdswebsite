@@ -59,7 +59,7 @@ BDS’s forté is on-the-job-training which we conduct at the Client’s premise
             <div className="max-w-screen-md mx-auto   text-center">
                   <h2 className="text-2xl font-bold mb-4 py-10">Courses</h2>
 
-                  <Courses/>
+                 
             </div>
         </div>
 
