@@ -1,5 +1,4 @@
-"use server"
-import { error } from "console";
+"use server";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -24,8 +23,7 @@ export const sendEmail = async (formData: FormData) =>  {
     reply_to: email as string,
     html:` <p>My name is ${name}</p>
     <p> ${message}</p>
-    <p>You can get back to me on ${email}</p>
-    
+    <p>You can get back to me on ${email}</p> 
     `,
   })
 }
