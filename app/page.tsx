@@ -11,7 +11,7 @@ import ContactForm from "./components/contact/ContactForm";
 
 export default function Home() {
 
- 
+ //   <GoogleMaps/>
 
   const DATA = [
     { image: '/images/image002.png' },
@@ -98,7 +98,7 @@ BDS’s forté is on-the-job-training which we conduct at the Client’s premise
 
             <div id="map" className="map-container">
               <p>Map</p>
-            <GoogleMaps/>
+         
             </div>
             <div >
             <p>Contact Information</p>
