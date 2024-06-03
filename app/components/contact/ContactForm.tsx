@@ -7,7 +7,7 @@ function ContactForm() {
   return (
     <form
       action={async (formData) => {
-        await sendEmail(formData)
+        await sendEmail(formData);
       }}
       className="rounded-lg bg-slate-200/30 p-8 w-[400px]"
     >
@@ -18,7 +18,6 @@ function ContactForm() {
           name="name"
           type="text"
           placeholder="Name"
-          maxLength={50}
           required
           className="rounded-md p-2 text-black"
         />
@@ -27,14 +26,11 @@ function ContactForm() {
           type="email"
           required
           placeholder="Email"
-          maxLength={50}
           className="rounded-md p-2 text-black"
         />
         <textarea
           name="message"
           placeholder="Message"
-          required
-          maxLength={500}
           className="rounded-md p-2 min-h-40 text-black"
         />
 
