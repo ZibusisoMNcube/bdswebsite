@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import HeroImage from "../public/Table-mountain.jpg";
 import styles from "./styles/Hero.module.css"
@@ -5,7 +6,7 @@ import Courses from "./components/courses/courses";
 import Team from "./components/team/team";
 import Carousel from "./components/carousel/carousel";
 import GoogleMaps from './components/map/GoogleMaps';
-import ContactForm from "./components/contact/contact";
+import ContactForm from "./components/contact/ContactForm";
 
 
 export default function Home() {
@@ -113,21 +114,9 @@ BDS’s forté is on-the-job-training which we conduct at the Client’s premise
       </div>
           </div>
 
-          <div className="grid grid-row-1 text-center">
-
-          <div className="grid grid-cols-2 text-center">
             <div>
-            <p>   Contact form</p>
-            <ContactForm/>
+              <ContactForm/>
             </div>
-
-            <div>
-            <p>   Socialmedia</p>
-            </div>
-
-          </div>
-
-          </div>
 
         </div>
   </div>

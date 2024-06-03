@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/map/map.jsx", "app/components/contact/contact.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/map/map.jsx", "app/components/contact/ContactForm.tsx", "app/actions/sendEmail.ts"],
   "exclude": ["node_modules"]
 }
