@@ -6,7 +6,8 @@ import Courses from "./components/courses/courses";
 import Team from "./components/team/team";
 import Carousel from "./components/carousel/carousel";
 import GoogleMaps from './components/map/GoogleMaps';
-import ContactForm from "./components/contact/ContactForm";
+import ContactForm from './components/contact/ContactForm';
+import MyContactForm from './components/contact/MyContactForm';
 
 
 export default function Home() {
@@ -106,7 +107,8 @@ BDS’s forté is on-the-job-training which we conduct at the Client’s premise
           </div>
 
             <div>
-              <ContactForm/>
+         <MyContactForm/>
+              
             </div>
 
         </div>
