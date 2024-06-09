@@ -4,6 +4,14 @@ import Link from "next/link";
 import Logo from "../../../public/Logo.png"
 import styles from "../navbar/navbar.module.css"
 
+/**
+ * 
+ * @returns  <Link href="#about" className="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">About</Link>
+            <Link href="#courses" className="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">Courses</Link>
+            <Link href="#team" className="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">The Team</Link>
+            <Link href="#contact" className="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+ */
+
   export default function App() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -16,23 +24,35 @@ import styles from "../navbar/navbar.module.css"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            
-           <Image className="hidden lg:flex"
+            <Link href="#">
+            <Image className="hidden lg:flex"
       src={Logo}
       alt="Logo"
       width={150}
       height={150}
-    />
+    />            
+            </Link>
+
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-             
-                <a className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
-          
-                <a className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Our Team</a>
-             
-                <a className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Courses</a>
-                <a className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+             <Link href="#about" >
+        About
+
+             </Link>
+             <Link href="#team" >
+             Our Team
+
+             </Link>
+             <Link href="#courses" >
+             Courses
+
+             </Link>
+             <Link href="#contact" >
+       Contact
+
+             </Link>
+               
               
             </div>
           </div>
@@ -62,6 +82,7 @@ import styles from "../navbar/navbar.module.css"
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
          
+            
             <a className="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">About</a>
 
             <a className="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">Our Team</a>

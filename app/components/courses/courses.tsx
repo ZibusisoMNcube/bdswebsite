@@ -9,7 +9,7 @@ const content = [
     {
         title: "Catering Principles",
         subtitle: "Level 2",
-        factsheet:"/factsheets/",
+        factsheet:"/factsheets/FOOD SAFETY FOR CATERING LEVEL 2 FACTSHEET.docx",
         imageUrl: "/images/BDSCatering_Principles_Level_2_Bar.jpg",
       },
       {
@@ -21,49 +21,55 @@ const content = [
       {
         title: "Culinary And Hospitality",
         subtitle: "Level 2",
-        factsheet:"/factsheets/",
+        factsheet:"/factsheets/FOOD SERVICE TABLE ATTENDANT CERTIFICATE FACTSHEET.docx",
         imageUrl: "/images/BDSCULINARY_AND_HOSPITALITY_level_2.jpg",
       },
       {
         title: "Customer service",
         subtitle: "Level 2",
-        factsheet:"/factsheets/",
+        factsheet:"/factsheets/CUSTOMER SERVICE FACTSHEET.docx",
         imageUrl: "/images/BDSCUSTOMER_SERVICE_level_2.jpg",
       },
       {
         title: "Food Safety For Catering",
         subtitle: "Level 2",
-        factsheet:"/factsheets/",
+        factsheet:"/factsheets/FOOD SAFETY FOR CATERING LEVEL 2 FACTSHEET.docx",
         imageUrl: "/images/BDSFOOD_SAFETY_for_Cateringlevel_2.jpg",
       },
       {
         title: "Hospitality And Catering Principles",
         subtitle: "Level 2",
-        factsheet:"/factsheets/",
+        factsheet:"/factsheets/FOOD & BEVERAGE CERTIFICATE FACTSHEET.docx",
         imageUrl: "/images/BDSHOSPITALITY_and_Catering_Principles_Level_2.jpg",
       },
 
       {
         title: "Food Safety For Catering",
         subtitle: "Level 3",
-        factsheet:"/factsheets/",
+        factsheet:"/factsheets/FOOD SAFETY FOR CATERING LEVEL 3 FACTSHEET.docx",
         imageUrl: "/images/BDSFood_Safety_for_Catering_level_3.jpg",
       },
       {
         title: "Food Allergen Management in Catering",
         subtitle: "Level 3",
-        factsheet:"/factsheets/",
+        factsheet:"/factsheets/ALLERGENS FACTSHEET.docx",
         imageUrl: "/images/BDSFood_Allergen_Management_in_Catering_llevel_3.jpg",
       },
       {
         title: "Supervising Food Safety At Sea",
         subtitle: "Level 3",
-        factsheet:"/factsheets/",
+        factsheet:"/factsheets/SUPERVISING FOOD SAFETY AT SEA FACTSHEET.docx",
+        imageUrl: "/images/BDSSupervising_Food_Safety_at_Sea_level_3.jpg",
+      },
+      {
+        title: "Supervising Food Safety At Sea",
+        subtitle: "Level 3",
+        factsheet:"/factsheets/BARISTA FACTSHEET.docx",
         imageUrl: "/images/BDSSupervising_Food_Safety_at_Sea_level_3.jpg",
       },
 ]
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
         {content.map((item, index) =>(
             <div  key={index} className="bg-gray-200 p-4 relative mb-20">
                 

@@ -26,15 +26,19 @@ export default function MyContactForm () {
 
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
+   
+     <>
+    
+     <form ref={form} onSubmit={sendEmail}>
+ 
+       <div className='grid grid-cols-2'>
+         <div><input id="name" type="text" name="name"  placeholder="Name"/></div>
+         <div> <input id="email" type="text" name="email" placeholder="Email"/></div>
+       </div>
+       <div> <textarea id="message" name="message" placeholder="Message"/></div>
+       <button>Send</button>
+     </form>
+     </>
   )
 }
 

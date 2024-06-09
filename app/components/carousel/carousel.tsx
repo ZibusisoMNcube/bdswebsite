@@ -7,7 +7,7 @@ const Carousel = ({
   data,
 }: {
   data: {
-    image: string
+    image: string,
   }[]
 }) => {
   // State and Ref initialization
@@ -26,6 +26,8 @@ const Carousel = ({
       })
     }
   }, [])
+
+  
 
   return (
     <div>
