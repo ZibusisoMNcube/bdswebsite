@@ -28,7 +28,6 @@ export default function MyContactForm () {
   return (
    
      <>
-    
      <form ref={form} onSubmit={sendEmail}>
  
        <div className='grid grid-cols-2'>

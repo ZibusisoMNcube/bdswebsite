@@ -81,9 +81,17 @@ BDS’s forté is on-the-job-training which we conduct at the Client’s premise
         <h2 className="text-2xl font-bold mb-4 py-10">Contact</h2>
           <div className="grid grid-cols-3">
 
+            import Image from 'next/image'; // Add the missing import statement
+
             <div id="map" className="map-container">
               <p>Map</p>
-         <GoogleMaps/>
+
+              <div className="mapContainer">
+                <div id="my-map-display">
+                  <iframe src="https://www.google.com/maps/embed/v1/place?q=Unit+3,+Prosperity+Park,+Computer+Rd,+Marconi+Beam,+Cape+Town,+7441&key=AIzaSyC82B-YYyOcgarmnkKfy9nkD39QB7SifuI"></iframe>
+                </div>
+                <a className="the-googlemap-enabler" rel="nofollow" href="https://www.bootstrapskins.com/themes" id="auth-map-data"></a>
+              </div>
             </div>
             <div >
             <p>Contact Information</p>
