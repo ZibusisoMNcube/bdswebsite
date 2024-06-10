@@ -81,8 +81,6 @@ BDS’s forté is on-the-job-training which we conduct at the Client’s premise
         <h2 className="text-2xl font-bold mb-4 py-10">Contact</h2>
           <div className="grid grid-cols-3">
 
-            import Image from 'next/image'; // Add the missing import statement
-
             <div id="map" className="map-container">
               <p>Map</p>
 
