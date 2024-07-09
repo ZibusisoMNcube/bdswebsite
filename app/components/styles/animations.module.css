@@ -1,0 +1,105 @@
+/* animations.module.css */
+@keyframes heroImageGrow {
+    from {
+      transform: scale(0.05);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes heroLogoSpin {
+    from {
+      transform: rotate(0deg) scale(1.5);
+    }
+    to {
+      transform: rotate(-360deg) scale(0.05);
+    }
+  }
+  
+  @keyframes textMoveLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes textMoveCenter {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes paragraphFlyIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes courseMoveLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes courseMoveRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes teamMemberFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hero-image-grow {
+    animation: heroImageGrow 2s ease-in-out forwards;
+  }
+  
+  .hero-logo-spin {
+    animation: heroLogoSpin 2s ease-in-out forwards;
+  }
+  
+  .text-move-left {
+    animation: textMoveLeft 1s ease-in-out forwards;
+  }
+  
+  .text-move-center {
+    animation: textMoveCenter 1s ease-in-out forwards;
+  }
+  
+  .paragraph-fly-in {
+    animation: paragraphFlyIn 1s ease-in-out forwards;
+  }
+  
+  .course-move-left {
+    animation: courseMoveLeft 1s ease-in-out forwards;
+  }
+  
+  .course-move-right {
+    animation: courseMoveRight 1s ease-in-out forwards;
+  }
+  
+  .team-member-fade-in {
+    animation: teamMemberFadeIn 1s ease-in-out forwards;
+  }
+  

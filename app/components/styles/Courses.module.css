@@ -1,0 +1,22 @@
+/* styles/Courses.module.css */
+.coursesSection {
+    height: 95vh;
+    overflow: hidden;
+  }
+  
+  .coursesContainer {
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Hide scrollbar for Webkit browsers */
+  .coursesContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .coursesContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  

@@ -1,0 +1,65 @@
+/* Hero.module.css */
+
+.hero {
+    background-image: linear-gradient(to right, #96320B, #E3974B, #E94516, #BC7B4C);
+    color: #fff;
+    padding: 6rem 0; /* Adjust padding as needed */
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero .btn {
+    background-color: #fff;
+    color: #96320B;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #E3974B;
+    color: #fff;
+  }
+  
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+  .card {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%;
+    margin: 10px;
+  }
