@@ -31,22 +31,23 @@ const Home: React.FC = () => {
           <Welcome />
         </section>
         <section id="courses" className="bg-gradient-to-b from-[#96320B] to-[#E94516] py-5 w-screen">
-          <h2 className="text-3xl font-bold text-center">Our Courses</h2>
+          <h2 id ="courses header"className="text-3xl font-bold text-center">Our Courses</h2>
           <Courses_2 />
         </section>
         <section id="team" className="bg-gradient-to-b from-[#E94516] to-[#E3974B] py-5 w-screen">
-          <h2 className="text-3xl font-bold text-center ">Our Team</h2>
+          <h2 id ="team header"className="text-3xl font-bold text-center ">Our Team</h2>
           <Team />
         </section>
-        <section id="calendar" className="bg-gradient-to-b from-[#E3974B] to-[#BC7B4C] py-5 w-screen">
+        <section id="awards" className="bg-gradient-to-b from-[#E3974B] to-[#E94516] py-5 w-screen">
+          <Awards />
+        </section>
+        <section id="calendar" className="bg-gradient-to-b from-[#E94516] to-[#BC7B4C] py-5 w-screen">
           <Calendar />
         </section>
         <section id="contact" className="bg-gradient-to-b from-[#BC7B4C] to-[#96320B] py-5 w-screen">
           <Contact />
         </section>
-        <section id="awards" className="bg-gradient-to-b from-[#96320B] to-[#E3974B] py-5 w-screen">
-          <Awards />
-        </section>
+
       </div>
     </>
   );
