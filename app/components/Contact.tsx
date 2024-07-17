@@ -32,7 +32,7 @@ const ContactSection: React.FC = () => {
     }, []);
 
     return (
-        <section className={styles.contactSection}>
+        <section className={styles.contactSection} style={{ height: '140%' }}>
             <div className={`${styles.contactContainer}`} ref={containerRef}>
                 <div className="flex flex-col items-center p-10 ">
                     <div className="flex flex-col justify-center gap-8 h-full">

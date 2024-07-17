@@ -1,0 +1,24 @@
+.mapContainer {
+    width: 300px;
+    height: 300px;
+    border: 0;
+  }
+  
+  /* Customize the Google Maps controls */
+  .gm-control-active, .gm-bundled-control {
+    background-color: #b44e0f !important;
+    border-color: #b44e0f !important;
+  }
+  
+  .gm-fullscreen-control {
+    background-color: #b44e0f !important;
+  }
+  
+  .gm-control-active > div, .gm-bundled-control > div, .gm-fullscreen-control > div {
+    background-color: #b44e0f !important;
+  }
+  
+  .gm-style .gm-style-mtc div[title] {
+    color: white !important;
+  }
+  

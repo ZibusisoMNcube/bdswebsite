@@ -1,6 +1,6 @@
-"use client"; 
+"use client";
 
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -38,9 +38,10 @@ const App: React.FC = () => {
         <div className="hidden md:block">
           <div className="ml-4 flex items-center md:ml-6">
             <Link href="#hero" onClick={(e) => handleScroll(e, 'hero')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">About</Link>
-            <Link href="#team" onClick={(e) => handleScroll(e, 'team')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Our Team</Link>
-            <Link href="#courses" onClick={(e) => handleScroll(e, 'courses')}  className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Courses</Link>
-            <Link href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+            <Link href="#courses" onClick={(e) => handleScroll(e, 'courses')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Courses</Link>
+            <Link href="#calendar" onClick={(e) => handleScroll(e, 'calendar')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Dates</Link>
+            <Link href="#team" onClick={(e) => handleScroll(e, 'team header')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Our Team</Link>
+            <Link href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Contact Us</Link>
           </div>
         </div>
         <div className="md:hidden flex-shrink-0">
@@ -57,10 +58,11 @@ const App: React.FC = () => {
       </div>
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden w-screen`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <Link href="#hero" onClick={(e) => handleScroll(e, 'hero')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">About</Link>
-          <Link href="#team" onClick={(e) => handleScroll(e, 'team')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Our Team</Link>
-          <Link href="#courses" onClick={(e) => handleScroll(e, 'courses')}  className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Courses</Link>
-          <Link href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+          <Link href="#hero" onClick={(e) => handleScroll(e, 'hero')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">About</Link>
+          <Link href="#courses" onClick={(e) => handleScroll(e, 'courses')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Courses</Link>
+          <Link href="#calendar" onClick={(e) => handleScroll(e, 'calendar')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Dates</Link>
+          <Link href="#team" onClick={(e) => handleScroll(e, 'team header')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Our Team</Link>
+          <Link href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-white hover:bg-[#751904] block px-3 py-2 rounded-md text-base font-medium">Contact Us</Link>
         </div>
       </div>
     </nav>

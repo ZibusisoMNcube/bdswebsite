@@ -1,5 +1,6 @@
+// components/Team.tsx
 import React from 'react';
-import { Image } from "@nextui-org/react";
+import Image from 'next/image';
 import styles from './styles/Team.module.css';
 
 interface TeamMember {
@@ -32,22 +33,22 @@ const teamMembers: TeamMember[] = [
 
 const Team: React.FC = () => {
   return (
-    <section id="team" className={`${styles.teamSection}`}>
-      <div className={`${styles.teamContainer}`}>
+    <section id="team" className={styles.teamSection}>
+      <div className={styles.teamContainer}>
         {teamMembers.map((member, index) => (
           <div key={index} className={`${styles.card} shadow-xl`}>
-            <div className={`${styles.cardInner}`}>
-              <div className={`${styles.cardFront}`}>
-                <Image src={member.imageUrl} alt={member.name} className={`${styles.cardImage}`} width={320} height={400} />
-                <h3 className={`${styles.cardTitle}`}>{member.name}</h3>
-                <p className={`${styles.cardSubtitle}`}>{member.title}</p>
-                <p className={`${styles.cardOthertext}`}>[hover for more]</p>
+            <div className={styles.cardInner}>
+              <div className={styles.cardFront}>
+                <Image src={member.imageUrl} alt={member.name} className={styles.cardImage} width={320} height={400} />
+                <h3 className={styles.cardTitle}>{member.name}</h3>
+                <p className={styles.cardSubtitle}>{member.title}</p>
+                <p className={styles.cardOthertext}>[hover for more]</p>
               </div>
-              <div className={`${styles.cardBack}`}>
-                <Image src={member.imageUrl} alt={member.name} className={`${styles.cardImage}`} width={320} height={400} />
-                <h3 className={`${styles.cardTitle}`}>{member.name}</h3>
-                <p className={`${styles.cardSubtitle}`}>{member.title}</p>
-                <p className={`${styles.cardDescription}`}>{member.bio}</p>
+              <div className={styles.cardBack}>
+                <Image src={member.imageUrl} alt={member.name} className={styles.cardImage} width={320} height={400} />
+                <h3 className={styles.cardTitle}>{member.name}</h3>
+                <p className={styles.cardSubtitle}>{member.title}</p>
+                <p className={styles.cardDescription}>{member.bio}</p>
               </div>
             </div>
           </div>
