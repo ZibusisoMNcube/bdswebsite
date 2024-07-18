@@ -17,31 +17,7 @@ interface Course {
 
 const courses: Course[] = [
   {
-    title: "Highfield Level 2 Certificate in Hospitality and Catering Principles (Beverage Service) (RQF)",
-    subtitle: "Level 2",
-    factsheet:"/factsheets/FOOD SAFETY FOR CATERING LEVEL 2 FACTSHEET.docx",
-    image: "/images/BDSCatering_Principles_Level_2_Bar.jpg",
-  },
-  {
-    title: "Highfield Level 2 Award, in Conflict Management (RQF)",
-    subtitle: "Level 2",
-    factsheet:"/factsheets/CONFLICT MANAGEMENT FACTSHEET.docx",
-    image: "/images/BDSCONFLICT_MANAGEMENT_level_2.jpg",
-  },
-  {
-    title: "Highfield Level 2 Certificate in Hospitality and Catering Principles (Food & Beverage Service) (RQF)",
-    subtitle: "Level 2",
-    factsheet:"/factsheets/FOOD SERVICE TABLE ATTENDANT CERTIFICATE FACTSHEET.docx",
-    image: "/images/BDSCULINARY_AND_HOSPITALITY_level_2.jpg",
-  },
-  {
-    title: "Highfield Level 2 Certificate in Customer Service (RQF)",
-    subtitle: "Level 2",
-    factsheet:"/factsheets/CUSTOMER SERVICE FACTSHEET.docx",
-    image: "/images/BDSCUSTOMER_SERVICE_level_2.jpg",
-  },
-  {
-    title: "Food Safety (Level 2)",
+    title: "Highfield Level 2 Award in Food Safety for Catering (RQF)",
     subtitle: "Level 2",
     factsheet:"/factsheets/FOOD SAFETY FOR CATERING LEVEL 2 FACTSHEET.docx",
     image: "/images/BDSFOOD_SAFETY_for_Cateringlevel_2.jpg",
@@ -49,14 +25,8 @@ const courses: Course[] = [
   {
     title: "Highfield Level 3 Award in Food Safety for Catering (RQF)",
     subtitle: "Level 3",
-    factsheet:"/factsheets/FOOD & BEVERAGE CERTIFICATE FACTSHEET.docx",
-    image: "/images/BDSHOSPITALITY_and_Catering_Principles_Level_2.jpg",
-  },
-  {
-    title: "Highfield Level 2 Certificate in Hospitality and Catering Principles (Food Service) (RQF)",
-    subtitle: "Level 3",
     factsheet:"/factsheets/FOOD SAFETY FOR CATERING LEVEL 3 FACTSHEET.docx",
-    image: "/images/BDSFood_Safety_for_Catering_level_3.jpg",
+    image: "/images/BDSHOSPITALITY_and_Catering_Principles_Level_2.jpg",
   },
   {
     title: "Highfield Level 3 Award in Food Allergen Management in Catering (RQF)",
@@ -65,10 +35,28 @@ const courses: Course[] = [
     image: "/images/BDSFood_Allergen_Management_in_Catering_llevel_3.jpg",
   },
   {
-    title: "Food Safety (Level 3)",
+    title: "Highfield Level 3 Award in Supervising Food Safety at Sea (RQF)",
     subtitle: "Level 3",
     factsheet:"/factsheets/SUPERVISING FOOD SAFETY AT SEA FACTSHEET.docx",
     image: "/images/BDSSupervising_Food_Safety_at_Sea_level_3.jpg",
+  },
+  {
+    title: "Highfield Level 2 Certificate in Hospitality and Catering Principles (Food & Beverage Service) (RQF)",
+    subtitle: "Level 2",
+    factsheet:"/factsheets/FOOD & BEVERAGE CERTIFICATE FACTSHEET.docx",
+    image: "/images/BDSCULINARY_AND_HOSPITALITY_level_2.jpg",
+  },
+  {
+    title: "Highfield Level 2 Certificate in Hospitality and Catering Principles (Food Service) (RQF)",
+    subtitle: "Level 2",
+    factsheet:"/factsheets/FOOD SERVICE TABLE ATTENDANT CERTIFICATE FACTSHEET.docx",
+    image: "/images/BDSFood_Safety_for_Catering_level_3.jpg",
+  },
+  {
+    title: "Highfield Level 2 Certificate in Hospitality and Catering Principles (Beverage Service) (RQF)",
+    subtitle: "Level 2",
+    factsheet:"/factsheets/BEVERAGE BAR ATTENDANT CERTIFICATE FACTSHEET.docx",
+    image: "/images/BDSCatering_Principles_Level_2_Bar.jpg",
   },
   {
     title: "Highfield Level 2 Award in Barista Skills (RQF)",
@@ -76,13 +64,27 @@ const courses: Course[] = [
     factsheet:"/factsheets/BARISTA FACTSHEET.docx",
     image: "/images/BDSBARISTA FACTSHEET.jpg",
   },
+  
+  {
+    title: "Highfield Level 2 Certificate in Customer Service (RQF)",
+    subtitle: "Level 2",
+    factsheet:"/factsheets/CUSTOMER SERVICE FACTSHEET.docx",
+    image: "/images/BDSCUSTOMER_SERVICE_level_2.jpg",
+  },
+  {
+    title: "Highfield Level 2 Award, in Conflict Management (RQF)",
+    subtitle: "Level 2",
+    factsheet:"/factsheets/CONFLICT MANAGEMENT FACTSHEET.docx",
+    image: "/images/BDSCONFLICT_MANAGEMENT_level_2.jpg",
+  },
+
 ];
 
 const Courses: React.FC = () => {
   return (
     <section id="coursesinnersection" className={`${styles.coursesSection} py-5 custom-scrollbar overflow-auto`} style={{ height: '140%' }}>
       <div className={`${styles.coursesContainer} container mx-auto max-w-7xl px-4 h-full`}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 h-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 h-full">
           {courses.map((course, index) => (
             <CourseCard key={index} course={course} index={index} />
           ))}
