@@ -9,12 +9,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     // Set up Nodemailer transporter
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com', // e.g., smtp.gmail.com
+      host: 'smtp.gmail.com',
       port: 587,
-      secure: false, // true for 465, false for other ports
+      secure: false,
       auth: {
-        user: process.env.EMAIL_USER, // your email user
-        pass: process.env.EMAIL_PASS, // your email password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 

@@ -12,22 +12,27 @@ const ContactForm: React.FC = () => {
   const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, email, message }),
-    });
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (res.status === 200) {
-      setStatus('Email sent successfully!');
-      setName('');
-      setEmail('');
-      setMessage('');
-    } else {
+      if (res.status === 200) {
+        setStatus('Email sent successfully!');
+        setName('');
+        setEmail('');
+        setMessage('');
+      } else {
+        setStatus('Error sending email. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
       setStatus('Error sending email. Please try again later.');
     }
   };
@@ -35,7 +40,7 @@ const ContactForm: React.FC = () => {
   return (
     <div>
       <form onSubmit={handleOnSubmit} className="flex flex-col space-y-4 max-w-md mx-auto">
-        <h2 className="text-xl font-bold mb-2">send us a message :</h2>
+        <h2 className="text-xl font-bold mb-2">Send us a message :</h2>
         {status && <p>{status}</p>}
         <p>
           <label htmlFor="name" className="text-xl">Name</label>
