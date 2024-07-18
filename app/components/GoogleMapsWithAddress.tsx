@@ -43,7 +43,7 @@ const GoogleMapsWithAddress: React.FC = () => {
         title: 'Prosperity Business Park',
         label: {
           text: 'Prosperity Business Park',
-          color: '#000',
+          color: '#fff',
           fontSize: '14px',
           fontWeight: 'bold',
         },
