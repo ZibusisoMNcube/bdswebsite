@@ -68,8 +68,8 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 1 }}
-            className={`${styles.welcomeText} text-center text-white text-4xl md:text-5xl font-bold z-10 px-4 py-5 mb-2.5`}
-            style={{ marginBottom: '20px' }}
+            className={`${styles.welcomeText} text-center text-white text-4xl md:text-5xl font-bold z-10 px-4`}
+            style={{ marginBottom: '10px' }}
           >
             Welcome to Baobab Development Solutions
           </motion.div>
@@ -79,12 +79,12 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2.5, duration: 1 }}
-            className={`${styles.metropolisText} text-center text-2xl md:text-3xl font-bold z-10 rounded-lg px-4 py-2 mb-2.5`}
+            className={`${styles.metropolisText} text-center text-2xl md:text-3xl font-bold z-10 rounded-lg px-4 py-2`}
             style={{
               background: "linear-gradient(to bottom, #751904, #b44e0f)",
               border: "1px solid #751904",
               color: "white",
-              marginBottom: '10px'
+              marginBottom: '5px'
             }}
           >
             A Metropolis of Hospitality Training
