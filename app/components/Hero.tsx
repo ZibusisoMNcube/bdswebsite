@@ -1,20 +1,31 @@
-'use client';
+// Hero.tsx
+'use client'
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import HeroImage from '../../public/images/hero.jpg';
-import HeroLogo from '../../public/images/Logo.png';
 import SmallLogo from '../../public/images/Logo.png';
 import styles from './styles/Hero.module.css';
 
 const Hero: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(true);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsAnimating(false);
     }, 1500); // Total duration of initial animations plus screen split
-    return () => clearTimeout(timer);
+
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Check initial screen size
+    window.addEventListener('resize', handleResize);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   return (
@@ -42,6 +53,7 @@ const Hero: React.FC = () => {
 
       {!isAnimating && (
         <>
+          {/* Hero Image */}
           <motion.div
             initial={{ scale: 0.05, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -51,6 +63,8 @@ const Hero: React.FC = () => {
           >
             <Image src={HeroImage} alt="Hero Image" layout="fill" objectFit="cover" />
           </motion.div>
+
+          {/* Welcome text */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -59,6 +73,8 @@ const Hero: React.FC = () => {
           >
             Welcome to Baobab Development Solutions
           </motion.div>
+
+          {/* Metropolis text */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -72,14 +88,20 @@ const Hero: React.FC = () => {
           >
             A Metropolis of Hospitality Training
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 3, duration: 1 }}
-            className="z-10 py-5 mb-2.5"
-          >
-            <Image id='logo' src={SmallLogo} alt="Small Logo" width={300} height={300} className="pb-5 m-5" />
-          </motion.div>
+
+          {/* SmallLogo - Hide on small screens */}
+          {!isSmallScreen && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 3, duration: 1 }}
+              className="z-20 py-5 mb-2.5"
+            >
+              <Image id='logo' src={SmallLogo} alt="Small Logo" width={300} height={300} className="pb-5 m-5" />
+            </motion.div>
+          )}
+
+          {/* Contact information */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
