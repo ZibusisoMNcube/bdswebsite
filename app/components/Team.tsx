@@ -42,7 +42,7 @@ const Team: React.FC = () => {
                 <Image src={member.imageUrl} alt={member.name} className={styles.cardImage} width={320} height={400} />
                 <h3 className={styles.cardTitle}>{member.name}</h3>
                 <p className={styles.cardSubtitle}>{member.title}</p>
-                <p className={styles.cardOthertext}>[hover for more]</p>
+                <p className={styles.cardOthertext}>[click for more]</p>
               </div>
               <div className={styles.cardBack}>
                 <Image src={member.imageUrl} alt={member.name} className={styles.cardImage} width={320} height={400} />
