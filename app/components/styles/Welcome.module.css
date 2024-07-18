@@ -9,11 +9,12 @@
 }
 
 .welcome_text {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Set font size to 1.5rem */
   text-align: center;
   margin-top: 2rem;
-  padding-left: 20px;  /* Add padding to ensure text is 20px from the left */
-  padding-right: 20px; /* Add padding to ensure text is 20px from the right */
+  padding-left: 20px;  /* Ensure text is 20px from the left */
+  padding-right: 20px; /* Ensure text is 20px from the right */
+  line-height: 1.5; /* Default line height */
 }
 
 .animation_container {
@@ -43,5 +44,9 @@
 @media screen and (max-width: 768px) {
   .animation_container {
     height: 300px;
+  }
+
+  .welcome_text {
+    line-height: 2; /* Increased line height for small screens */
   }
 }
