@@ -8,9 +8,15 @@ import award2 from '../../public/images/image003.png';
 import styles from './styles/Awards.module.css';
 
 const reviews = [
-  { heading: "Excellent Service", text: "The service provided was excellent and met all my expectations.", author: "John Doe", time: "2 days ago" },
-  { heading: "Highly Recommend", text: "I highly recommend this company for their outstanding work.", author: "Jane Smith", time: "1 week ago" },
-  { heading: "Professional Team", text: "The team was professional and delivered great results.", author: "Alice Johnson", time: "3 days ago" },
+  { text: " Extensive knowledge about industry, fun and engaging presentation , positive and fun classroom atmosphere.", author: "Megan Strong", time: "18-06-2024" },
+  { text: " Lecturer was very prepared, friendly & worked at a good pace.", author: "Danielle Heyink", time: "16-05-2024" },
+  { text: "Learning in a comfortable and relaxing environment, where everyone is treated fairly.", author: "Darla Grimsdell", time: "23-04-2024" },
+  { text: " Lindie is excellent! Read the room well and knew all the content. Very helpful!", author: " Jenna Coetzee", time: "08-04-2024" },
+  { text: " Yvette is welcoming, patient and very informative.", author: " Entle Masipa", time: "25-03-2024" },
+  { text: " Enjoyed our lecturer very much. Ansie was very informative and filled with wisdom. The coffee and tea was a special touch.", author: "Novellen Pienaar", time: "19-03-2024" },
+  { text: "I enjoyed the open communication and the fact that our lecturer had experience in the yachting industry.", author: "Francis Sebastian Bosman", time: "06-02-2024" },
+  { text: "I thoroughly enjoyed my course. I loved the interaction and the clear explanation. Had no need for any questions.", author: "Simone Winterback", time: "12-01-2024" },
+
   // Add more reviews as needed
 ];
 
@@ -50,9 +56,10 @@ const Awards: React.FC = () => {
           </motion.div>
         </div>
         <div className="mt-10">
-          <h2 className="text-2xl font-bold mb-3">{currentReview.heading}</h2>
+          {/* <h2 className="text-2xl font-bold mb-3">{currentReview.heading}</h2> */}
           <p className="text-lg mb-3">{currentReview.text}</p>
-          <p className="text-sm text-[#751904]">- {currentReview.author}, {currentReview.time}</p>
+          <p className="text-sm text-[#751904]">~ {currentReview.author}, {currentReview.time} ~ </p>
+          
         </div>
       </div>
     </div>
