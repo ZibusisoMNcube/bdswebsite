@@ -5,13 +5,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem; /* Adjusted padding to reduce space around the text */
+  margin-bottom: -25rem; /* Ensure there's no extra margin at the bottom */
 }
 
 .welcome_text {
   font-size: 1.5rem; /* Set font size to 1.5rem */
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem; /* Reduced margin to minimize space above the text */
   padding-left: 20px;  /* Ensure text is 20px from the left */
   padding-right: 20px; /* Ensure text is 20px from the right */
   line-height: 1.5; /* Default line height */
@@ -43,7 +44,7 @@
 
 @media screen and (max-width: 768px) {
   .animation_container {
-    height: 300px;
+    height: 300px; /* Adjusted height for smaller screens */
   }
 
   .welcome_text {

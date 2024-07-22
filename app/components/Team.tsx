@@ -36,13 +36,12 @@ const Team: React.FC = () => {
     <section id="team" className={styles.teamSection}>
       <div className={styles.teamContainer}>
         {teamMembers.map((member, index) => (
-          <div key={index} className={`${styles.card} shadow-xl`}>
+          <div key={index} className={`${styles.card} shadow-xl`} title="Click for more">
             <div className={styles.cardInner}>
               <div className={styles.cardFront}>
                 <Image src={member.imageUrl} alt={member.name} className={styles.cardImage} width={320} height={400} />
                 <h3 className={styles.cardTitle}>{member.name}</h3>
                 <p className={styles.cardSubtitle}>{member.title}</p>
-                <p className={styles.cardOthertext}>[click for more]</p>
               </div>
               <div className={styles.cardBack}>
                 <Image src={member.imageUrl} alt={member.name} className={styles.cardImage} width={320} height={400} />

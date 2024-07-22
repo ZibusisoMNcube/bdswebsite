@@ -55,7 +55,15 @@ const GoogleMapsWithAddress: React.FC = () => {
 
   return (
     <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
-      <div className={styles.mapContainer} ref={mapRef}></div>
+      {/* <div className={styles.mapContainer} ref={mapRef}></div> */}
+      <div className={styles.mapContainer}><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13249.72766719123!2d18.5101537!3d-33.8785285!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5f112e7c6a93%3A0xcd69fde217c09367!2sBAOBAB%20DEVELOPMENT%20SOLUTIONS!5e0!3m2!1sen!2sza!4v1721663046523!5m2!1sen!2sza" 
+      width="100%" 
+      height="100%" 
+      style={{border:0 }}
+      loading="lazy" 
+      >
+        </iframe>
+        </div>
       <div>
         <h2 className="text-xl font-bold mb-2">Contact</h2>
         <p>Name: Yvette Van Zyl</p>

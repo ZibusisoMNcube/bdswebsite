@@ -24,10 +24,10 @@ const Home: React.FC = () => {
 
       </Head>
       <div className="w-screen">
-        <section id="hero" className="bg-gradient-to-b from-[#E3974B] to-[#BC7B4C] py-10 w-screen">
+        <section id="hero" className="bg-gradient-to-b from-[#E3974B] to-[#96320B] py-10 w-screen">
           <Hero />
         </section>
-        <section id="welcome" className="bg-gradient-to-b from-[#BC7B4C] to-[#96320B] pt-10 w-screen">
+        <section id="welcome" className="bg-gradient-to-b from-[#96320B] to-[#96320B] pt-0  w-screen">
           <Welcome />
         </section>
         <section id="courses" className="bg-gradient-to-b from-[#96320B] to-[#E94516] pt-20 w-screen">
