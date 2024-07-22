@@ -64,7 +64,7 @@ const GoogleMapsWithAddress: React.FC = () => {
       >
         </iframe>
         </div>
-      <div>
+      <div className='pl-5'>
         <h2 className="text-xl font-bold mb-2">Contact</h2>
         <p>Name: Yvette Van Zyl</p>
         <p>Phone: +27 79 577 2042</p>

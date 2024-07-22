@@ -32,16 +32,16 @@ const ContactSection: React.FC = () => {
     }, []);
 
     return (
-        <section className={styles.contactSection} style={{ height: '140%' }}>
+        <section className={styles.contactSection} style={{ height: '100%' }}>
             <div className={`${styles.contactContainer}`} ref={containerRef}>
-                <div className="flex flex-col items-center p-10 ">
-                    <div className="flex flex-col justify-center gap-8 h-full">
+                <div className="flex flex-col items-center ">
+                    <div className="flex flex-col justify-center gap-2 h-full">
                         <GoogleMapsWithAddress />
                         <ContactForm />
                     </div>
                 </div>
             </div>
-            {showChevrons && (
+            {/* {showChevrons && (
                 <>
                     <FaChevronUp
                         className={`${styles.chevron} ${styles.chevronUp}`}
@@ -52,7 +52,7 @@ const ContactSection: React.FC = () => {
                         onClick={() => containerRef.current?.scrollBy({ top: 100, behavior: 'smooth' })}
                     />
                 </>
-            )}
+            )} */}
         </section>
     );
 };

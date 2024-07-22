@@ -105,16 +105,7 @@ const CourseCard: React.FC<{ course: Course; index: number }> = ({ course, index
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={ref}
-      className="p-4 flex flex-col h-full"
-      initial="hidden"
-      animate={controls}
-      variants={{
-        hidden: { opacity: 0, y: 100 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: index * 0.2 } }
-      }}
-    >
+    <div className="p-4 flex flex-col h-full" >
       <motion.div
         whileHover={{ scale: 1.05 }}
         className="bg-gradient-to-b from-[#751904] to-[#b44e0f] rounded-lg shadow-xl overflow-hidden flex flex-col h-full transform transition-transform duration-300"
@@ -140,7 +131,7 @@ const CourseCard: React.FC<{ course: Course; index: number }> = ({ course, index
           </div>
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 

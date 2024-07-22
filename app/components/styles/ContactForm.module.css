@@ -1,0 +1,19 @@
+/* ContactForm.module.css */
+
+.form {
+    background-color: #b44e0f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input {
+    background-color: #ffffff;
+    color: #751904;
+  }
+  
+  .textarea {
+    background-color: #ffffff;
+    color: #751904;
+  }
+  

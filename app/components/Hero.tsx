@@ -1,3 +1,5 @@
+// components/Hero.tsx
+
 'use client'
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -68,7 +70,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 1 }}
-            className={`${styles.welcomeText} text-center text-white text-4xl md:text-5xl font-bold z-10 px-4`}
+            className={`${styles.welcomeText} text-white text-4xl md:text-5xl font-bold z-10 px-4`}
             style={{ marginBottom: '10px' }}
           >
             Welcome to Baobab Development Solutions
@@ -79,7 +81,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 2.5, duration: 1 }}
-            className={`${styles.metropolisText} text-center text-2xl md:text-3xl font-bold z-10 rounded-lg px-4 py-2`}
+            className={`${styles.metropolisText} text-white text-2xl md:text-3xl font-bold z-10 rounded-lg px-4 py-2`}
             style={{
               background: "linear-gradient(to bottom, #751904, #b44e0f)",
               border: "1px solid #751904",

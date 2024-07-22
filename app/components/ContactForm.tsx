@@ -1,84 +1,92 @@
-// components/ContactForm.tsx
-
 'use client';
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+import styles from './styles/ContactForm.module.css'; // Import your CSS module
 
 const ContactForm: React.FC = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
   const [status, setStatus] = useState<string | null>(null);
 
-  const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    setStatus('Sending...');
 
     try {
-      const res = await fetch('/api/contact', {
+      const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify(formData),
       });
 
-      const data = await res.json();
-
-      if (res.status === 200) {
-        setStatus('Email sent successfully!');
-        setName('');
-        setEmail('');
-        setMessage('');
+      const result = await response.json();
+      if (response.ok) {
+        setStatus('Email sent successfully');
+        setFormData({ name: '', email: '', message: '' });
       } else {
-        setStatus('Error sending email. Please try again later.');
+        setStatus(`Error: ${result.message}`);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      setStatus('Error sending email. Please try again later.');
+      setStatus('Error sending email.');
     }
   };
 
   return (
-    <div>
-      <form onSubmit={handleOnSubmit} className="flex flex-col space-y-4 max-w-md mx-auto">
-        <h2 className="text-xl font-bold mb-2">Send us a message :</h2>
-        {status && <p>{status}</p>}
-        <p>
-          <label htmlFor="name" className="text-xl">Name</label>
+    <div className="flex justify-center items-center min-h-screen py-6 px-4 sm:px-6 lg:px-8">
+      <form onSubmit={handleSubmit} className={`${styles.form} flex flex-col space-y-4 max-w-md w-full`}>
+        <h2 className="text-xl font-bold mb-4 text-white">Send us a message :</h2>
+        {status && <p className="text-white mb-4">{status}</p>}
+        <div>
+          <label htmlFor="name" className="text-white text-xl">Name</label>
           <input
+            type="text"
             id="name"
-            type="text"
             name="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md bg-[#b44e0f]"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className={`${styles.input} w-full px-4 py-2 border rounded-md`}
           />
-        </p>
-        <p>
-          <label htmlFor="email" className="text-xl">Email</label>
+        </div>
+        <div>
+          <label htmlFor="email" className="text-white text-xl">Email</label>
           <input
+            type="email"
             id="email"
-            type="text"
             name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md bg-[#b44e0f]"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className={`${styles.input} w-full px-4 py-2 border rounded-md`}
           />
-        </p>
-        <p>
-          <label htmlFor="message" className="text-xl">Message</label>
+        </div>
+        <div>
+          <label htmlFor="message" className="text-white text-xl">Message</label>
           <textarea
             id="message"
             name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-4 py-2 border rounded-md bg-[#b44e0f]"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            className={`${styles.textarea} w-full px-4 py-2 border rounded-md`}
           />
-        </p>
-        <p>
-          <button className="bg-[#751904] hover:bg-[#4c1303] text-white text-xl py-2 px-4 rounded-md">
-            Submit
-          </button>
-        </p>
+        </div>
+        <button type="submit" className="bg-[#751904] hover:bg-[#4c1303] text-white text-xl py-2 px-4 rounded-md">
+          Send
+        </button>
       </form>
     </div>
   );
