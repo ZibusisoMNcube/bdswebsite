@@ -29,6 +29,7 @@ const handler = async (req: ExtendedNextApiRequest, res: NextApiResponse) => {
     //   subject: 'New Contact Form Submission',
     //   text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     // };
+    
     // Set up email data - uncomment for development
     const mailOptions = {
         from: process.env.GMAIL_USER,
