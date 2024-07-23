@@ -1,10 +1,10 @@
 /* styles/Calendar.module.css */
 
 .calendarContainer {
-    width: 100%;
+    width: 90%;
     max-width: 70%; /* Maximum width for larger screens */
     height: 90vh;
-    padding-bottom: 50%; 
+    padding-bottom: 40%; 
     position: relative;
   }
   

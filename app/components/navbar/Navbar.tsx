@@ -27,12 +27,12 @@ const App: React.FC = () => {
 
   return (
     // <nav className="bg-gray-800 shadow-md fixed w-full z-50 py-4"> background: "linear-gradient(to bottom, #751904, #b44e0f)"
-    <nav className="bg-gradient-to-b from-[#751904] to-[#b44e0f] shadow-md fixed w-screen z-50 py-4">
+    <nav className="bg-gradient-to-b from-[#751904] to-[#b44e0f] shadow-md fixed z-50 py-4">
       <div className="w-screen mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-10">
         {/* <div className="flex items-center justify-between h-16"> */}
         <div className="flex-shrink-0">
           <Link href="#">
-            <Image className="hidden lg:flex " src={Logo} alt="Logo" width={120} height={110} />
+            <Image className="hidden lg:flex " src={Logo} alt="Logo" width={110} height={110} />
           </Link>
         </div>
         <div className="hidden md:block">
@@ -46,7 +46,7 @@ const App: React.FC = () => {
         </div>
         <div className="md:hidden flex-shrink-0">
           <Link href="#">
-            <Image src={Logo} alt="Logo" width={150} height={150} />
+            <Image src={Logo} alt="Logo" width={95} height={95} />
           </Link>
         </div>
         <div className="md:hidden">
