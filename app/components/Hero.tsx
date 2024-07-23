@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
               background: "linear-gradient(to bottom, #751904, #b44e0f)",
               border: "1px solid #751904",
               color: "white",
-              marginBottom: '5px'
+              marginBottom: '5px',
             }}
           >
             A Metropolis of Hospitality Training
@@ -114,7 +114,8 @@ const Hero: React.FC = () => {
               background: "linear-gradient(to bottom, #751904, #b44e0f)",
               border: "1px solid #751904",
               color: "white",
-              marginBottom: '10px'
+              marginBottom: '10px',
+              marginTop: '5px',
             }}
           >
             <p>Contact: Yvette Van Zyl</p>
