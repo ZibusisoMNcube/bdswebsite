@@ -17,9 +17,9 @@ const Home: React.FC = () => {
 
         {/* to be done later */}
         <meta name="description" content="Baobab Development Solutions" />
-        <meta name="keywords" content="Baobab Development Solutions, to inour other keywords, here" />
+        <meta name="keywords" content="Hotel Development Solutions, Hotel Development Services, Hotel Solutions Consulting, Hospitality Development Planning, Highfield Food Safety Course, Highfield Food Safety Certification, Accredited Food Safety Courses, Highfield Food Safety Training, Baobab Hospitality, Baobab Hospitality Services, Baobab Hotel Management, Baobab Hospitality Consulting, Food Safety Certificate South Africa, South Africa Food Safety Certification, Food Safety Training South Africa, Accredited Food Safety South Africa, Baobab Education, Baobab Educational Programs, Baobab Training Courses, Baobab Learning Solutions, Baobab, Baobab Services, Baobab Consulting, Baobab Solutions, Hospitality, Hospitality Management, Hospitality Training, Hospitality Services, Highfield, Highfield Certification, Highfield Training, Highfield Courses, Food Service, Food Service Management, Food Service Training, Food Service Solutions, Food Safety, Food Safety Standards, Food Safety Compliance, Food Safety Management, Food Safety Cape Town, Cape Town Food Safety, Food Safety Training Cape Town, Food Safety Certification Cape Town, Allergens, Food Allergens Training, Allergens Safety Certification, Food Allergy Management, Highfield Courses, Highfield Accredited Courses, Highfield Training Programs, Highfield Certification Courses, Yachting Food Safety, Yachting Food Safety Training, Marine Food Safety Certification, Yacht Crew Food Safety, Food & Beverage, Food & Beverage Management, Food & Beverage Training, Food & Beverage Services, Barista, Barista Training Courses, Professional Barista Certification, Barista Skills Development" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.tobedetermined.bds/focuspage" />
+        <link rel="canonical" href="http://baobabsolutions.co.za/" />
         {/* ***************** */}
 
       </Head>
