@@ -30,7 +30,7 @@ const Welcome: React.FC = () => {
 
   return (
     <div className={styles.welcome_container}>
-      <div className={`container mx-auto text-center pt-10`} ref={ref}>
+      <div className={`container mx-auto text-center max-w-7xl pt-10`} ref={ref}>
         {directions.map((direction, index) => (
           <motion.p
             key={index}
