@@ -28,7 +28,7 @@ const ContactForm: React.FC = () => {
         'service_pvhky4q',
         'template_k249nej',
         formData,
-        'Yyavtmlp1vuwyGrYpY'
+        'yavtmlp1vuwyGrYpY'
       );
 
       setStatus('Email sent successfully');
