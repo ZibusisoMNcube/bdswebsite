@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
+import emailjs from 'emailjs-com';
 import styles from './styles/ContactForm.module.css'; // Import your CSS module
 
 const ContactForm: React.FC = () => {
@@ -23,29 +24,22 @@ const ContactForm: React.FC = () => {
     setStatus('Sending...');
 
     try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      await emailjs.send(
+        'service_pvhky4q',
+        'template_k249nej',
+        formData,
+        'Yyavtmlp1vuwyGrYpY'
+      );
 
-      const result = await response.json();
-      if (response.ok) {
-        setStatus('Email sent successfully');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setStatus(`Error: ${result.message}`);
-      }
+      setStatus('Email sent successfully');
+      setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error sending email:', error);
       setStatus('Error sending email.');
     }
   };
 
   return (
-    
     <div className="flex justify-center items-center min-h-screen py-6 px-4 sm:px-6 lg:px-8">
       <form onSubmit={handleSubmit} className={`${styles.form} flex flex-col space-y-4 max-w-md w-full`}>
         <h2 className="text-xl font-bold mb-4 text-white">Send us a message :</h2>
