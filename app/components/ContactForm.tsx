@@ -5,8 +5,8 @@ import styles from './styles/ContactForm.module.css'; // Import your CSS module
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     message: '',
   });
   const [status, setStatus] = useState<string | null>(null);
@@ -25,14 +25,18 @@ const ContactForm: React.FC = () => {
 
     try {
       await emailjs.send(
-        'service_pvhky4q',
-        'template_8sdk045',
-        formData,
-        'yavtmlp1vuwyGrYpY'
+        'service_pvhky4q', // Your service ID
+        'template_8sdk045', // Your template ID
+        {
+          from_name: formData.from_name,
+          from_email: formData.from_email,
+          message: formData.message,
+        },
+        'yavtmlp1vuwyGrYpY' // Your user ID
       );
 
       setStatus('Email sent successfully');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ from_name: '', from_email: '', message: '' });
     } catch (error) {
       console.error('Error sending email:', error);
       setStatus('Error sending email.');
@@ -45,24 +49,24 @@ const ContactForm: React.FC = () => {
         <h2 className="text-xl font-bold mb-4 text-white">Send us a message :</h2>
         {status && <p className="text-white mb-4">{status}</p>}
         <div>
-          <label htmlFor="name" className="text-white text-xl">Name</label>
+          <label htmlFor="from_name" className="text-white text-xl">Name</label>
           <input
             type="text"
-            id="name"
-            name="name"
-            value={formData.name}
+            id="from_name"
+            name="from_name"
+            value={formData.from_name}
             onChange={handleChange}
             required
             className={`${styles.input} w-full px-4 py-2 border rounded-md`}
           />
         </div>
         <div>
-          <label htmlFor="email" className="text-white text-xl">Email</label>
+          <label htmlFor="from_email" className="text-white text-xl">Email</label>
           <input
             type="email"
-            id="email"
-            name="email"
-            value={formData.email}
+            id="from_email"
+            name="from_email"
+            value={formData.from_email}
             onChange={handleChange}
             required
             className={`${styles.input} w-full px-4 py-2 border rounded-md`}
