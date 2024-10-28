@@ -23,7 +23,7 @@ export default function Footer() {
         
         {/* </div> */}
       {/* </div> */}
-      <p className=" text-sm leading-5 text-white z-10 mx-auto max-w-7xl px-6 py-5 space-y-4"> &copy; 2024 BDS (Pty) Ltd. All rights reserved. </p>
+      <p className=" text-sm leading-5 text-white z-10 mx-auto max-w-7xl px-6 py-5 space-y-4"> &copy; 2024 BDS (Pty) Ltd. All rights reserved. Site by CompGeo (Pty) Ltd </p>
     </footer>
   );
 }
